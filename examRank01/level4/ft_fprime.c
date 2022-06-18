@@ -28,12 +28,12 @@ void    ft_fprime(char *s)
         printf("1");
     while (idx <= nbr)
 	{
-		if ((nbr % idx) == 0 && ft_is_prime(idx))
+		while ((nbr % idx) == 0 && ft_is_prime(idx))
 		{
 			if (j == 1)
 				printf("%d", idx);
 			else
-				printf(" * %d", idx);
+				printf("*%d", idx);
 			j = 0;
 			nbr /= idx;
 		}
