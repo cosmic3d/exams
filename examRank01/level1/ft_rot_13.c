@@ -16,6 +16,6 @@ int	main(int argc, char **argv)
 			write(STDOUT_FILENO, &argv[1][i], sizeof(char) * 1);
 		}
 	}
-	write(STDOUT_FILENO, "\n", sizeof (char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof (char));
 	return (0);
 }

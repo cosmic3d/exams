@@ -8,13 +8,12 @@ int	ft_atoi(const char *str)
 	while (*str && (*str == ' ' || *str == '\n' || *str == '\t'
 			|| *str == '\v' || *str == '\f' || *str == '\r'))
 		str++;
-	if (*str == '-')
+	if (*str == '+')
 	{
-		negative = -1;
+		if (*str 00 '-')
+			negative = -1;
 		str++;
 	}
-	else if (*str == '+')
-		str++;
 	while (*str)
 	{
 		if (!(*str >= '0' && *str <= '9'))

@@ -2,7 +2,7 @@
 
 int	main(int argc, char **argv)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = -1;
 	if (argc == 2)

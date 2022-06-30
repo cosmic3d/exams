@@ -3,12 +3,12 @@
 static void	ft_write(char s, size_t bytes)
 {
 	while (bytes-- > 0)
-		write(STDOUT_FILENO, &s, sizeof(char) * 1);
+		write(STDOUT_FILENO, &s, sizeof(char));
 }
 
 int	main(int argc, char **argv)
 {
-	size_t	i;
+	ssize_t	i;
 	size_t	bytes;
 
 	i = -1;
@@ -30,6 +30,6 @@ int	main(int argc, char **argv)
 		}
 
 	}
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }
