@@ -25,7 +25,7 @@ int	ft_nbrlen(int nbr)
 char	*ft_itoa(int nbr)
 {
 	char	*res;
-	int	len;
+	int		len;
 
 	len = ft_nbrlen(nbr);
 	res = (char *)malloc(sizeof(char) * len + 1);
