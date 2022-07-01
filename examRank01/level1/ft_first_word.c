@@ -14,9 +14,8 @@ int	main(int argc, char **argv)
 	i = -1;
 	if (argc == 2)
 	{
-		while (argv[1][++i] && argv[1][i] == '\t' || argv[1][i] == ' ');
-		i--;
-		while (argv[1][++i] && argv[1][i] != '\t' && argv[1][i] != ' ')
+		while (argv[1][++i] && (argv[1][i] == '\t' || argv[1][i] == ' '));
+		while (argv[1][++i] && (argv[1][i] != '\t' && argv[1][i] != ' '))
 			ft_write(argv[1][i]);
 	}
 	ft_write('\n');
