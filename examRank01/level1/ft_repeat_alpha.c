@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-static void	ft_write(char s, size_t bytes)
+static void	ft_write(char s, ssize_t bytes)
 {
 	while (bytes-- > 0)
 		write(STDOUT_FILENO, &s, sizeof(char));
@@ -9,7 +9,7 @@ static void	ft_write(char s, size_t bytes)
 int	main(int argc, char **argv)
 {
 	ssize_t	i;
-	size_t	bytes;
+	ssize_t	bytes;
 
 	i = -1;
 	if (argc == 2)

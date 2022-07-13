@@ -1,6 +1,3 @@
-#include <stdio.h>
-#include <string.h>
-
 char	*ft_strcpy(char *dst, char *src)
 {
 	while (*src)
@@ -8,6 +5,10 @@ char	*ft_strcpy(char *dst, char *src)
 	*dst = '\0';
 	return (dst);
 }
+
+// -=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-
+#include <stdio.h>
+#include <string.h>
 
 int	main(void)
 {

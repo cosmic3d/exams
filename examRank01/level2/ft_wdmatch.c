@@ -2,12 +2,12 @@
 
 void	ft_wdmatch(char *s, char *charset)
 {
-	size_t	i;
+	ssize_t	i;
 
-	i = 0;
+	i = -1;
 	while (s[++i])
 	{
-		while ((*charset != s[i]) && *charset != '\0')
+		while (*charset && (*charset != s[i]))
 			++charset;
 		if (*charset == '\0')
 			return ;

@@ -2,18 +2,20 @@
 
 int	main(int argc, char **argv)
 {
-	size_t	i;
+	ssize_t	i;
+	char	*s;
 
 	i = -1;
+	s = argv[1];
 	if (argc > 1)
 	{
-		while(argv[1][++i])
+		while(s[++i])
 		{
-			if (argv[1][i] >= 'a' && argv[1][i] <= 'z')
-				argv[1][i] = (argv[1][i] - 'a' + 13) % 26 + 'a';
-			else if (argv[1][i] >= 'A' && argv[1][i] <= 'Z')
-				av[1][i] = (argv[1][i] - 'A' + 13) % 26 + 'A';
-			write(STDOUT_FILENO, &argv[1][i], sizeof(char) * 1);
+			if (s[i] >= 'a' && s[i] <= 'z')
+				s[i] = (s[i] - 'a' + 13) % 26 + 'a';
+			else if (s[i] >= 'A' && s[i] <= 'Z')
+				s[i] = (s[i] - 'A' + 13) % 26 + 'A';
+			write(STDOUT_FILENO, &s[i], sizeof(char));
 		}
 	}
 	write(STDOUT_FILENO, "\n", sizeof (char));

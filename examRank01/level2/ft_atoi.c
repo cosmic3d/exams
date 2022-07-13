@@ -1,16 +1,15 @@
 int	ft_atoi(const char *str)
 {
 	int	res;
-	int	negative;
+	int	neg;
 
-	negative = 1;
+	neg = 1;
 	res = 0;
-	while (*str && (*str == ' ' || *str == '\n' || *str == '\t'
-			|| *str == '\v' || *str == '\f' || *str == '\r'))
+	while (*str == ' ' || (*str >= 9 && *str <= 13))
 		str++;
 	if (*str == '+')
 	{
-		if (*str 00 '-')
+		if (*str == '-')
 			negative = -1;
 		str++;
 	}
@@ -21,5 +20,5 @@ int	ft_atoi(const char *str)
 		res = res * 10 + (*str - 48);
 		str++;
 	}
-	return (res * negative);
+	return (res * neg);
 }

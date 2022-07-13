@@ -4,10 +4,10 @@
 
 int	main(int argc, char **argv)
 {
-	int	i;
-	int	j;
+	int		i;
+	int		j;
 	char	k;
-	int	rst;
+	int		rst;
 
 	if (argc == 4)
 	{

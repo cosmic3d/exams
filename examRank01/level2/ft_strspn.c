@@ -11,7 +11,7 @@ char	*ft_strchr(const char *s, int c)
 
 size_t	ft_strspn(const char *s, const char *accept)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = -1;
 	while (s[++i])

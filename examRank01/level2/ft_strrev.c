@@ -1,6 +1,6 @@
 int	ft_strlen(char *s)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = -1;
 	while (s[++i]);
@@ -9,8 +9,8 @@ int	ft_strlen(char *s)
 
 char 	*ft_strrev(char *s)
 {
-	size_t	i;
-	size_t	len;
+	ssize_t	i;
+	int		len;
 	char	tmp;
 
 	i = -1;

@@ -4,19 +4,21 @@
 
 static void	ft_write(char c)
 {
-	write(STDOUT_FILENO, &c, sizeof(char) * 1);
+	write(STDOUT_FILENO, &c, sizeof(char));
 }
 
 int	main(int argc, char **argv)
 {
-	size_t	i;
+	ssize_t	i;
+	char	*str;
 
 	i = -1;
+	str = argv[1];
 	if (argc == 2)
 	{
-		while (argv[1][++i] && (argv[1][i] == '\t' || argv[1][i] == ' '));
-		while (argv[1][++i] && (argv[1][i] != '\t' && argv[1][i] != ' '))
-			ft_write(argv[1][i]);
+		while (str[++i] && (str[i] == '\t' || str[i] == ' '));
+		while (str[++i] && (str[i] != '\t' && str[i] != ' '))
+			ft_write(str[i]);
 	}
 	ft_write('\n');
 	return (0);

@@ -6,5 +6,5 @@ void	ft_putstr(char	*str)
 
 	i = -1;
 	while (str[++i])
-		write(STDOUT_FILENO, &str[i], sizeof(char) * 1);
+		write(STDOUT_FILENO, &str[i], sizeof(char));
 }

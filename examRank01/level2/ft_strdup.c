@@ -2,7 +2,7 @@
 
 int	ft_strlen(char *s)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = -1;
 	while (s[++i]);
@@ -14,6 +14,8 @@ char	*ft_strdup(char *src)
 	size_t	len;
 	char	*dst;
 
+	if (!src)
+		return (NULL);
 	len = ft_strlen(src);
 	dst = (char *)malloc(sizeof(char) * len + 1);
 	if (!dst)

@@ -5,25 +5,23 @@ void	ft_print_union(char *s1, char *s2)
 	int	chars[126] = { 0 };
 	int	c;
 
-	while (*s1)
+	while (*s1++)
 	{
 		c = *s1;
 		if (chars[c] == 0)
 		{
-			write(STDOUT_FILENO, s1, sizeof(char) * 1);
+			write(STDOUT_FILENO, s1, sizeof(char));
 			chars[c] = 1;
 		}
-		s1++;
 	}
-	while (*s2)
+	while (*s2++)
 	{
 		c = *s2;
 		if (chars[c] == 0)
 		{
-			write(STDOUT_FILENO, s2, sizeof(char) * 1);
+			write(STDOUT_FILENO, s2, sizeof(char));
 			chars[c] = 1;
 		}
-		s2++;
 	}
 }
 

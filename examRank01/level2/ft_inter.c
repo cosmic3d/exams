@@ -2,7 +2,7 @@
 
 int	ft_check(char *s, char c, int idx)
 {
-	size_t	i;
+	ssize_t	i;
 
 	i = -1;
 	while (++i < idx)
@@ -13,8 +13,8 @@ int	ft_check(char *s, char c, int idx)
 
 int	main(int argc, char **argv)
 {
-	size_t	i;
-	size_t	j;
+	ssize_t	i;
+	ssize_t	j;
 
 	i = -1;
 	if (argc == 3)
@@ -25,10 +25,10 @@ int	main(int argc, char **argv)
 				if (argv[1][i] == argv[2][j])
 					if (!(ft_check(argv[1], argv[1][i], i)))
 					{	
-						write(STDOUT_FILENO, &argv[1][i], sizeof(char) * 1);
+						write(STDOUT_FILENO, &argv[1][i], sizeof(char));
 						break ;
 					}
 		}
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

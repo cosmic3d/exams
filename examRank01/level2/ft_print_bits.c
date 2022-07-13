@@ -11,12 +11,11 @@ void	ft_print_bits(unsigned char oct)
 	while (i-- > 0)
 	{
 		dst = ((oct >> i) & j) + '0';
-		write(STDOUT_FILENO, &dst, sizeof(char) * 1);
+		write(STDOUT_FILENO, &dst, sizeof(char));
 	}
 }
 
-#if 0
-int     main(void)
+/* int     main(void)
 {
         ft_print_bits(0);
         write(1, "\n", 1);
@@ -30,5 +29,4 @@ int     main(void)
         write(1, "\n", 1);
         ft_print_bits(255);
         write(1, "\n", 1);
-}
-#endif
+}*/
