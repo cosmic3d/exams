@@ -6,7 +6,7 @@ static int	ft_wdlen(char *s)
 	int	i;
 	
 	i = 0;
-	while  (s[i] != '\0' && s[i] != ' ' && s[i] != '\t')
+	while  (s[i] && s[i] != ' ' && s[i] != '\t')
 		++i;
 	return (i);
 }
@@ -33,6 +33,6 @@ int	main(int argc, char **argv)
 {
 	if (argc == 2)
 		ft_expand_str(argv[1]);
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }
