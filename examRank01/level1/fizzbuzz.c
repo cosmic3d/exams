@@ -17,7 +17,6 @@ int	main(void)
 	i = 0;
 	while (++i <= 100)
 	{
-
 		if ((i % 3 == 0) && (i % 5 == 0))
 			write(STDOUT_FILENO, "fizzbuzz", sizeof(char) * 8);
 		else if (i % 3 == 0)

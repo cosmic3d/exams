@@ -21,7 +21,7 @@ t_list	*sort_list(t_list* lst, int (*cmp)(int, int))
 		swap = 0;
 		while (new_lst && new_lst->next)
 		{
-			if (cmp(new_lst->data, new_lst->next->data) == 0)
+			if ((*cmp)(new_lst->data, new_lst->next->data) == 0)
 			{
 				ft_swap(new_lst, new_lst->next);
 				swap = 1;

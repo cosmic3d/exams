@@ -9,6 +9,7 @@ int	main(int argc, char **argv)
 	char	k;
 	int		rst;
 
+	rst = 0;
 	if (argc == 4)
 	{
 		i = atoi(argv[1]);
@@ -27,6 +28,6 @@ int	main(int argc, char **argv)
 		printf("%d\n", rst);
 	}
 	else
-		write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+		write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

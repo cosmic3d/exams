@@ -28,7 +28,7 @@ int	main(int argc, char **argv)
 		while (argv[1][i])
 		{
 			if (spaces == 0)
-				write(STDOUT_FILENO, " ", sizeof(char) * 1);
+				write(STDOUT_FILENO, " ", sizeof(char));
 			len = ft_wdlen(argv[1] + i);
 			write(STDOUT_FILENO, argv[1] + i, sizeof(char) * len);
 			i += len;
@@ -36,6 +36,6 @@ int	main(int argc, char **argv)
 			i = ft_skip(argv[1], i);
 		}
 	}
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

@@ -14,8 +14,8 @@ int	main(int argc, char **argv)
 				s[i] = 'M' - (s[i] - 'N');
 			else if (s[i] >= 'a' && s[i] <= 'z')
 				s[i] = 'm' - (s[i] - 'n');
-			write(STDOUT_FILENO, &s[i], sizeof(char) * 1);
+			write(STDOUT_FILENO, &s[i], sizeof(char));
 		}
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

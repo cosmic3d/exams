@@ -5,10 +5,8 @@ void ft_list_remove_if(t_list **begin_list, void *data_ref, int (*cmp)())
 {
 	t_list	*new_elt;
 
-	if (!begin_list || !*begin_list)
-		return ;
 	new_elt = *begin_list
-	if (cmp(new_elt->data, data_ref) == 0)
+	if ((*cmp)(new_elt->data, data_ref) == 0)
 	{
 		*begin_list = new_elt->next;
 		free(new_elt);

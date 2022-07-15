@@ -5,7 +5,8 @@ void	ft_cts(char *s)
 	while (*s)
 	{
 		if (*s >= 'A' && *s <= 'Z')
-		{	write(STDOUT_FILENO, "_", sizeof(char));
+		{	
+			write(STDOUT_FILENO, "_", sizeof(char));
 			*s += ('a' - 'A');
 		}
 		write(STDOUT_FILENO, s, sizeof(char));

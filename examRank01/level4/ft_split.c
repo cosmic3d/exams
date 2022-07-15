@@ -76,7 +76,7 @@ char	**ft_split(char *str)
 	{
 		array[word_index] = word_dupe(str);
 		++word_index;
-		while (*str &&  && ft_isSpace(*str) == 0)
+		while (*str && ft_isSpace(*str) == 0)
 			++str;
 		while (ft_isSpace(*str) == 1)
 			++str;
