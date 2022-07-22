@@ -5,7 +5,7 @@ static void	ft_putnbr(int nbr)
 	char *c;
 
 	c = "0123456789";
-	if (nbr > 9)
+	if (nbr > 10)
 		ft_putnbr(nbr / 10);
 	write(STDOUT_FILENO, &c[nbr % 10], sizeof(char));
 }

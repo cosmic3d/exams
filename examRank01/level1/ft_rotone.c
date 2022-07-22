@@ -12,9 +12,7 @@ int	main(int argc, char **argv)
 		{
 			if (s[i] == 'z' || s[i] == 'Z')
 				s[i] -= 25;
-			else if (s[i] >= 'a' && s[i] < 'z')
-				s[i] += 1;
-			else if (s[i] >= 'A' && s[i] < 'Z')
+			else if ((s[i] >= 'a' && s[i] < 'z') || (s[i] >= 'A' && s[i] < 'Z'))
 				s[i] += 1;
 			write(STDOUT_FILENO, &s[i], sizeof(char) * 1);
 		}

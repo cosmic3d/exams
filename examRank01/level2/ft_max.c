@@ -2,7 +2,7 @@ int	max(int *tab, unsigned int len)
 {
 	int	max;
 	
-	if (!len)
+	if (!tab || !len)
 		return (NULL);
 	max = tab[--len];
 	while (len--)

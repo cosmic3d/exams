@@ -1,10 +1,5 @@
 #include <unistd.h>
 
-static void	ft_write(char c)
-{
-	write(STDOUT_FILENO, &c, sizeof(char));
-}
-
 int	main(int argc, char **argv)
 {
 	ssize_t	i;
@@ -16,11 +11,11 @@ int	main(int argc, char **argv)
 			while (argv[1][++i])
 			{
 				if (argv[1][i] == argv[2][0])
-					ft_write(argv[3][0]);
+					write(STDOUT_FILENO, argv[3][0], sizeof(char));
 				else
-					ft_write(argv[1][i]);
+					write(STDOUT_FILENO, &argv[1][i], sizeof(char));
 			}
 	}
-	ft_write('\n');
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

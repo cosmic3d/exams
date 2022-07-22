@@ -1,12 +1,5 @@
 #include <unistd.h>
 
-// ft_firstword -> imprime la primera palabra pasada como argumento.
-
-static void	ft_write(char c)
-{
-	write(STDOUT_FILENO, &c, sizeof(char));
-}
-
 int	main(int argc, char **argv)
 {
 	ssize_t	i;
@@ -18,8 +11,8 @@ int	main(int argc, char **argv)
 	{
 		while (str[++i] && (str[i] == '\t' || str[i] == ' '));
 		while (str[++i] && (str[i] != '\t' && str[i] != ' '))
-			ft_write(str[i]);
+			write(STDOUT_FILENO, &str[i], sizeof(char));
 	}
-	ft_write('\n');
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

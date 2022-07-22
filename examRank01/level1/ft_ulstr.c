@@ -14,7 +14,7 @@ int	main(int argc, char **argv)
 				s[i] -= 32;
 			else if (s[i] >= 'A' && s[i] <= 'Z')
 				s[i] += 32;
-			write(STDOUT_FILENO, &s[i], sizeof(char) * 1);
+			write(STDOUT_FILENO, &s[i], sizeof(char));
 		}
 	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);

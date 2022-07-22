@@ -20,6 +20,6 @@ int	main(int argc, char **argv)
 {
 	if (argc == 3)
 		ft_wdmatch(argv[1], argv[2]);
-	write(STDOUT_FILENO, "\n", sizeof(char) * 1);
+	write(STDOUT_FILENO, "\n", sizeof(char));
 	return (0);
 }

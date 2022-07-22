@@ -18,7 +18,7 @@ int	ft_get_digit(char c, int db)
 	if (c <= max_digit && (c >= '0' && c <= '9'))
 		return (c - '0');
 	else if (c <= max_digit && (c >= 'a' && c <= 'f'))
-		return (10 + c - 'a');
+		return (c - 'a' + 10);
 	else
 		return (-1);
 }

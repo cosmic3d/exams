@@ -20,7 +20,7 @@ void	ft_putnbr(int nbr)
 	if (nbr >= 10)
 		ft_putnbr(nbr / 10);
 	c = (nbr % 10) + 48;
-	write(STDOUT_FILENO, &c, sizeof(char) * 1);
+	write(STDOUT_FILENO, &c, sizeof(char));
 }
 
 int	ft_prime(int nbr)
